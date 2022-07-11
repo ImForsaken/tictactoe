@@ -7,6 +7,25 @@ body {
     height: 100vh;
 }
 
+.startScreen {
+    position: absolute;
+    height: 600px;
+    width: 700px;
+    background-color: black;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./img/versus.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.startScreen input {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .playerPanel {
     display: flex;
     font-size: 32px;
@@ -30,6 +49,10 @@ body {
     opacity: 0.5;
 }
 
+.playTable {
+    position: relative;
+}
+
 .horizontalLine {
     height: 10px;
     width: 300px;
@@ -37,6 +60,7 @@ body {
     position: absolute;
     transform: scaleX(0.0);
     transition: transform 225ms ease-in-out;
+    z-index: 1;
 }
 
 .vertical {
@@ -97,6 +121,23 @@ table tr:last-child td {
     animation: zoomIn 225ms ease-in-out;
 }
 
+.winnerScreen {
+    background-color: #dddddd;
+    border-radius: 10px;
+    height: 110px;
+    width: 290px;
+    position: absolute;
+    top: 543px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    animation: winnerIn 225ms ease-in-out;
+}
+
 .restartButton {
     z-index: 2;
     width: 150px;
@@ -114,6 +155,17 @@ table tr:last-child td {
 }
 
 @keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes winnerIn {
     from {
         opacity: 0;
         transform: scale(0);
