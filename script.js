@@ -137,7 +137,7 @@ function restartGame() {
 }
 
 
-//Check fields expressions
+//Check fields condition
 
 
 //Check Horizontal lines
